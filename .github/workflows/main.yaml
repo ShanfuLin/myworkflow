@@ -21,3 +21,7 @@ jobs:
       run: echo "runner os - ${{ runner.os }}"
     - name: Echo my secret
       run: echo "My secret is ${{ secrets.MY_SECRET_REPOSITORY}}"
+    - name: Checkout the current repo
+      uses: actions/checkout@v3
+    - name: List my current directory after checkout
+      run: ls -l
